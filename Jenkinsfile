@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("Install Terraform"){
             steps{
-
+                    yum -y install terraform
             }
         }
         stage("TF Init"){
@@ -33,6 +33,7 @@ pipeline{
         stage("Invoke Lambda"){
             steps{
                 echo "Invoking your AWS Lambda"
+
             }
         }
     }
